@@ -30,3 +30,4 @@ Things you may want to cover:
 "# railsrensyuu" 
 "# railsrensyuu" 
 "# railsrensyuu" 
+"# railsrensyuu" 

@@ -1,0 +1,2 @@
+class MemberListController < ApplicationController
+end
