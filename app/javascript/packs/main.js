@@ -2,18 +2,22 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
 import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import App from '../app.vue'
-import store from '../store/index'
+import store from '../store'
 
 Vue.config.productionTip = false
+Vue.use(BootstrapVue);
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: 'app',
   //storeをローカルに登録
   //これでどこからでも使える
   store,
-  components: { App },
-  template: '<App/>',
+  //components: { App },
+  //template: '<App/>',
   render: h => h(App)
 })

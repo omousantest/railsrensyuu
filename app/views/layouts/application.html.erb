@@ -10,22 +10,8 @@
   </head>
 
   <body>
-    <!-- vue表示 -->
-    <div id="app">
-    </div>
-    
-    <header>
-        <nav>
-            <% if account_user_signed_in? %>
-            <%# <strong><%= link_to current_account_user.username, pages_show_path %></strong>
-                <%= link_to 'プロフィール変更', edit_account_user_registration_path %>
-                <%= link_to 'ログアウト', destroy_account_user_session_path, method: :delete %>
-            <% else %>
-                <%= link_to 'サインアップ', new_account_user_registration_path %>
-                <%= link_to 'ログイン', new_account_user_session_path %>
-            <% end %>
-        </nav>
-    </header>
+    <app></app>
+    <HeaderMenu></HeaderMenu>
     <!-- ログイン確認用 -->
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
@@ -34,4 +20,8 @@
   </body>
   <!-- 最後に定義する必要あり -->
   <%= javascript_pack_tag 'main' %>
+  <%= javascript_pack_tag 'header_menu' %>
+  <!--stylesheet_pack_tagを記述しないとvueのstyleタグが適用されない-->
+  <%= stylesheet_pack_tag  'main' %>
+  <%= stylesheet_pack_tag  'header_menu' %>
 </html>

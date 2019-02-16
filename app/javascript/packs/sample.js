@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import App from '../component/rails_slot_test.vue'
-import store from '../store/index'
+import store from '../store'
 
 Vue.use(Vuex);
 Vue.config.productionTip = false
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
-    name: 'RailsSlotTest',
+    name: 'HeaderMenu',
     store: store,
     computed: {
       message() {

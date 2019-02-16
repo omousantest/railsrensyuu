@@ -1,17 +1,18 @@
 <template>
-  <div id="app">
-    <p>{{ message }}</p>
-    <RailsSlotTest>aaa</RailsSlotTest>
+  <div>
+    app.vue
+    <HeaderMenu></HeaderMenu>
   </div>
+  
 </template>
 
 <script>
-import RailsSlotTest from "./component/rails_slot_test"
+import HeaderMenu from "./component/header_menu"
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    RailsSlotTest
+    HeaderMenu
   },
   //vuexのstoreは基本的にcomputedと使う
   computed: {
